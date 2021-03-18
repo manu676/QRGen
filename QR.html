@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="author" content="puravidaapps.com">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-1.8.0.min.js"></script>
+    <!-- Thank you Jerome Etienne for the jquery plugin https://github.com/jeromeetienne/jquery-qrcode -->
+    <script src="jquery.qrcode.min.js"></script>
+    <title>QR</title>
+</head>
+
+<body>
+    <div id="output"></div>
+
+    <script>
+    $(document).ready(function() {
+        // get parameter from the window.AppInventor object
+        var strText = window.AppInventor.getWebViewString();
+
+        // display the QR code
+        $('#output').qrcode(strText);
+    });
+    </script>
+
+</body>
+</html>
